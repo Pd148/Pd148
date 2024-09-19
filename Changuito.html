@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changuito Animado</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+            overflow: hidden;
+        }
+        .changuito {
+            position: relative;
+            width: 100px;
+            height: 150px;
+            animation: balancear 1s infinite alternate;
+        }
+        @keyframes balancear {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(10deg); }
+        }
+        .cabeza {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            background: brown;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+        .ojo {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+        }
+        .ojo.izquierdo {
+            top: 20px;
+            left: 15px;
+        }
+        .ojo.derecho {
+            top: 20px;
+            right: 15px;
+        }
+        .boca {
+            position: absolute;
+            top: 35px;
+            left: 50%;
+            width: 30px;
+            height: 15px;
+            background: red;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        .cuerpo {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            width: 80px;
+            height: 90px;
+            background: darkbrown;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        .brazo {
+            position: absolute;
+            width: 20px;
+            height: 60px;
+            background: brown;
+        }
+        .brazo.izquierdo {
+            top: 60px;
+            left: -20px;
+            transform: rotate(20deg);
+        }
+        .brazo.derecho {
+            top: 60px;
+            right: -20px;
+            transform: rotate(-20deg);
+        }
+        .pierna {
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            background: brown;
+        }
+        .pierna.izquierda {
+            top: 140px;
+            left: 20px;
+        }
+        .pierna.derecha {
+            top: 140px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="changuito">
+        <div class="cabeza">
+            <div class="ojo izquierdo"></div>
+            <div class="ojo derecho"></div>
+            <div class="boca"></div>
+        </div>
+        <div class="cuerpo">
+            <div class="brazo izquierdo"></div>
+            <div class="brazo derecho"></div>
+            <div class="pierna izquierda"></div>
+            <div class="pierna derecha"></div>
+        </div>
+    </div>
+</body>
+</html>
